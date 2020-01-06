@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fredoka One", cursive;
+  text-transform: uppercase;
+}
+
+.c-form__container {
+  width: 800px;
+  height: 400px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.c-form__wrapper {
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.5s, background-color 0.5s;
+}
+.c-form__wrapper--login {
+  width: 60%;
+  background-color: #ffffff;
+}
+.signup_active .c-form__wrapper--login {
+  width: 40%;
+  background-color: rgba(193, 7, 7, 0.87);
+  cursor: pointer;
+}
+.c-form__wrapper--signup {
+  width: 40%;
+  background-color: rgba(193, 7, 7, 0.87);
+  cursor: pointer;
+}
+.signup_active .c-form__wrapper--signup {
+  width: 60%;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+.c-form__title {
+  font-size: 40px;
+  font-weight: 200;
+  position: absolute;
+  text-align: center;
+  transition: all 0.5s;
+  display: inline-table;
+}
+.c-form__para {
+  font-size: 15px;
+  font-weight: 200;
+  position: absolute;
+  text-align: center;
+  transition: all 0.5s;
+}
+.c-form__title--login {
+  width: 0;
+  top: 50px;
+  left: 60px;
+  color: rgba(193, 7, 7, 0.87);
+}
+.signup_active .c-form__title--login {
+  width: 100%;
+  top: 50%;
+  left: 0;
+  color: white;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.c-form__title--signup {
+  width: 100%;
+  top: 50%;
+  left: 0;
+  color: white;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.c-form__para--signup {
+  width: 100%;
+  top: 80%;
+  left: 0;
+  color: white;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.signup_active .c-form__title--signup {
+  width: 0;
+  color: rgba(193, 7, 7, 0.87);
+  top: 50px;
+  left: 60px;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.c-form {
+  position: absolute;
+  top: 110px;
+  left: 60px;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+.signup_active .c-form--login {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+  opacity: 0;
+}
+.c-form--signup {
+  -webkit-transform: translateX(200%);
+  transform: translateX(200%);
+  opacity: 0;
+}
+.signup_active .c-form--signup {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+.c-form__input-container {
+  padding: 15px 0;
+}
+
+.c-form__input-wrapper {
+  width: 350px;
+  position: relative;
+}
+.c-form__input-wrapper .c-form__input {
+  width: 100%;
+}
+
+.c-form__input {
+  width: 350px;
+  padding: 10px 25px;
+  border: 1px solid #dddddd;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.04);
+  outline: none;
+}
+.c-form__input::-webkit-input-placeholder {
+  color: #7f848c;
+}
+.c-form__input::-moz-placeholder {
+  color: #7f848c;
+}
+.c-form__input:-ms-input-placeholder {
+  color: #7f848c;
+}
+.c-form__input:-moz-placeholder {
+  color: #7f848c;
+}
+
+.c-form__button {
+  padding: 15px 100px;
+  position: relative;
+  background: transparent;
+  border: 1px solid #dddddd;
+  font-family: Montserrat, sans-serif;
+  color: #7f848c;
+  text-transform: uppercase;
+  transition: color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.c-form__button:hover {
+  color: rgba(193, 7, 7, 0.87);
+  border-color: rgba(193, 7, 7, 0.87);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.c-form__input-show {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: rgba(193, 7, 7, 0.87);
+  font-weight: 300;
+  cursor: pointer;
+}
